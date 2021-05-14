@@ -3,10 +3,9 @@ import { usePatchReducer } from '../patch-reducer';
 import { IGreetingProps } from './IGreetingProps';
 import { IGreeting } from '../models/IGreeting';
 import { IResponse } from './IResponse';
-import { IResponseAction,ResponseReducerAction } from './IResponseAction';
+import { IResponseAction, ResponseReducerAction } from './IResponseAction';
 
-const Greeter: React.FC<IGreetingProps> = ({ greeting:IGreeting }) => {
-  const y=
+const Greeter: React.FC<IGreetingProps> = ({ greeting }) => {
   const responseReducer = (
     _state: IResponse,
     action: IResponseAction
@@ -19,16 +18,15 @@ const Greeter: React.FC<IGreetingProps> = ({ greeting:IGreeting }) => {
         return { response: payload };
     }
   };
-
   const init = (init: IResponse): IResponse => {
     return init;
   };
-
   const [response, responseDispatch] = usePatchReducer(
     responseReducer,
     { response: '', actor: '' },
     init
   );
+
   return (
     <>
       <h1 style={{ color: 'blue' }}>{greeting.message}</h1>
