@@ -1,4 +1,7 @@
 import React from 'react';
+import { usePatchReducer } from '../patch-reducer';
+import { IGreetingProps } from './IGreetingProps';
+import { IReesponse } from './IReesponse';
 
 const Greeter: React.FC<IGreetingProps> = ({ greeting }) => {
   const responseReducer = (
