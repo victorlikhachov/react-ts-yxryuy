@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Hello from './Hello';
+import Greeter from './Greeting/Greeter'
+import {IGreetingProps} from './Greeting/IGreetingProps'
 import './style.css';
 
 interface AppProps { }
