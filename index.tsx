@@ -24,6 +24,7 @@ class App extends Component<AppProps, AppState> {
         <p>
           Start editing to see some magic happen :)
         </p>
+      <Greeter greeting={{message:'Hello', sender:'Victor' }} />
       </div>
     );
   }

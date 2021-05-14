@@ -5,7 +5,7 @@ import { IGreeting } from '../models/IGreeting';
 import { IResponse } from './IResponse';
 import { IResponseAction, ResponseReducerAction } from './IResponseAction';
 
-const Greeter: React.FC<IGreetingProps> = ({ greeting }) => {
+export const Greeter: React.FC<IGreetingProps> = ({ greeting }) => {
   const responseReducer = (
     _state: IResponse,
     action: IResponseAction
