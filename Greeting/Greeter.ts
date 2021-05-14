@@ -1,10 +1,12 @@
 import React from 'react';
 import { usePatchReducer } from '../patch-reducer';
 import { IGreetingProps } from './IGreetingProps';
+import { IGreeting } from '../models/IGreeting';
 import { IResponse } from './IResponse';
 import { IResponseAction,ResponseReducerAction } from './IResponseAction';
 
-const Greeter: React.FC<IGreetingProps> = ({ greeting }) => {
+const Greeter: React.FC<IGreetingProps> = ({ greeting:IGreeting }) => {
+  const y=
   const responseReducer = (
     _state: IResponse,
     action: IResponseAction
