@@ -5,13 +5,15 @@ import { IGreeting } from '../models/IGreeting';
 import { IResponse } from './IResponse';
 import { IResponseAction, ResponseReducerAction } from './IResponseAction';
 
-export default const Greeter: React.FC<{}> = () => {
+ const Greeter: React.FC<IGreetingProps> = ({p}) => {
   return (
     <>
     Hello!
     </>
   );
 };
+
+/export default Greeter
 
 /* export default const Greeter: React.FC<IGreetingProps> = ({ greeting }) => {
   const responseReducer = (

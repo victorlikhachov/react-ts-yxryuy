@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Hello from './Hello';
-import Greeter from '../Greeting/Greeting'
+import Greeter from './Greeting/Greeter'
 import {IGreetingProps} from './Greeting/IGreetingProps'
 import './style.css';
 
@@ -26,7 +26,7 @@ class App extends Component<AppProps, AppState> {
         <p>
           Start editing to see some magic happen :)
         </p>
-     
+     <Greeter />
       </div>
     );
   }
