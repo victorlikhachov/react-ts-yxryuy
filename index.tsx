@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Hello from './Hello';
-import Greeter from './Greeting/Greeter'
-import {IGreetingProps} from './Greeting/IGreetingProps'
+import Greeter from './Greeting/Greeter';
+import { IGreetingProps } from './Greeting/IGreetingProps';
 import './style.css';
 
-interface AppProps { }
+interface AppProps {}
 interface AppState {
   name: string;
 }
@@ -16,17 +16,19 @@ class App extends Component<AppProps, AppState> {
     this.state = {
       name: 'React'
     };
+    this.greeting = {
+      message: 'Hello everyone!!!',
+      sender: 'Victor'
+    };
   }
 
+  private greeting: IGreeting;
 
   render() {
     return (
       <div>
         <Hello name={this.state.name} />
-        <p>
-          Start editing to see some magic happen :)
-        </p>
-     <Greeter />
+        <Greeter greeting={this.greeting} />
       </div>
     );
   }

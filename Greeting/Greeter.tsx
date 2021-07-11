@@ -5,16 +5,6 @@ import { IGreeting } from '../models/IGreeting';
 import { IResponse } from './IResponse';
 import { IResponseAction, ResponseReducerAction } from './IResponseAction';
 
- /*const Greeter: React.FC<{IGreetingProps}> = ({greeting}) => {
-  return (
-    <>
-    Hello!
-    </>
-  );
-};
-*/
-
-
 const Greeter: React.FC<IGreetingProps> = ({ greeting }) => {
   const responseReducer = (
     _state: IResponse,
@@ -39,7 +29,9 @@ const Greeter: React.FC<IGreetingProps> = ({ greeting }) => {
 
   return (
     <>
-      <h1 style={{ color: 'blue' }}>{greeting.message}</h1>
+      <h1 style={{ color: 'blue' }}>
+        '{greeting.sender}' says: {greeting.message}
+      </h1>
       <input
         type="text"
         value={response.response}
@@ -50,5 +42,5 @@ const Greeter: React.FC<IGreetingProps> = ({ greeting }) => {
     </>
   );
 };
- 
- export default Greeter
+
+export default Greeter;
