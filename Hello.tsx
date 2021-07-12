@@ -9,8 +9,7 @@ interface HelloState {
 }
 
 const hello: React.FC<HelloState> = state => {
-  console.log(state);
-  return <h1>Hello {state.name}!</h1>;
+  return <h1>{`Hello ${state.name}!`}</h1>;
 };
 export default hello;
 

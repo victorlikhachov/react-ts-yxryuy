@@ -30,7 +30,7 @@ const Greeter: React.FC<IGreetingProps> = ({ greeting }) => {
   return (
     <>
       <h1 style={{ color: 'blue' }}>
-        '{greeting.sender}' says: {greeting.message}
+        {`'${greeting.sender}' says: ${greeting.message}`}
       </h1>
       <input
         type="text"
