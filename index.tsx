@@ -50,7 +50,18 @@ class App extends Component<AppProps, AppState> {
         <div>
           <Hello name={this.state.name} />
           <Greeter greeting={this.greeting} />
-          <StyledDiv divStyle={styleForDiv}>Hey again</StyledDiv>
+          <StyledDiv divStyle={styleForDiv}>Hey from styled div!</StyledDiv>
+          <div
+            style={{
+              fontWeight: 'bold',
+              fontFamily: 'Arial',
+              marginTop: '20px',
+              fontSize: 20,
+              color: 'DarkRed'
+            }}
+          >
+            Experiments with CSS grid:
+          </div>
           <GridContainer>
             <GridItemA>A</GridItemA>
             <GridItemB>B</GridItemB>

@@ -14,6 +14,7 @@ fontStyle?: 'normal'|'italic'|'oblique'|'initial'|'inherit';
 
 //destructuring
 export const StyledDiv = styled.div<{divStyle: DivStyle}>`
+margin-top: 20px;
 color: ${({divStyle : {color}}) => color ?? 'aqua'};
 font-size: ${({divStyle}) => divStyle.size ?? 30}px;
 font-style: ${props=> props.divStyle.fontStyle ?? 'normal'};

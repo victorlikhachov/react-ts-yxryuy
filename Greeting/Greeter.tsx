@@ -4,6 +4,16 @@ import { IGreetingProps } from './IGreetingProps';
 import { IGreeting } from '../models/IGreeting';
 import { IResponse } from './IResponse';
 import { IResponseAction, ResponseReducerAction } from './IResponseAction';
+import styled from 'styled-components';
+
+const GreeterHeader = styled.h1`
+  color: blue;
+
+  &.pretty {
+    font-style: italic;
+    text-decoration: underline;
+  }
+`;
 
 const Greeter: React.FC<IGreetingProps> = ({ greeting }) => {
   const responseReducer = (
@@ -29,9 +39,9 @@ const Greeter: React.FC<IGreetingProps> = ({ greeting }) => {
 
   return (
     <>
-      <h1 style={{ color: 'blue' }}>
+      <GreeterHeader className="pretty">
         {`'${greeting.sender}' says: ${greeting.message}`}
-      </h1>
+      </GreeterHeader>
       <input
         type="text"
         value={response.response}
